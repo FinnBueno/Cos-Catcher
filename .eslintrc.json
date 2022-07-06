@@ -34,10 +34,7 @@
             "error"
         ],
         "react/function-component-definition": "off",
-        "indent": [
-            "error",
-            4
-        ],
+        "indent": "off",
         "react/jsx-indent": [
             "error",
             4
@@ -49,7 +46,10 @@
         "no-unused-vars": "off",
         "@typescript-eslint/no-unused-vars": [
             "warn",
-            { "varsIgnorePattern": "^_" }
+            {
+                "varsIgnorePattern": "^_",
+                "argsIgnorePattern": "^_"
+            }
         ],
         "no-underscore-dangle": "off",
         "comma-dangle": "off",
@@ -68,7 +68,15 @@
         "linebreak-style": "off",
         "max-len": ["warn", 120],
         "react-hooks/rules-of-hooks": "error",
-        "react-hooks/exhaustive-deps": "warn"
+        "react-hooks/exhaustive-deps": "warn",
+        "jsx-quotes": ["error", "prefer-single"],
+        "react/require-default-props": [
+            1,
+            {
+                "forbidDefaultForRequired": true,
+                "functions": "defaultArguments"
+            }
+        ]
     },
     "settings": {
         "import/resolver": {
