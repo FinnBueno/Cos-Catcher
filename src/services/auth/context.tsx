@@ -9,8 +9,6 @@ type AuthenticatedUser = {
     uid: string;
 } | undefined;
 
-type AuthError = Error | boolean;
-
 type Auth = {
     loading: boolean;
     user?: AuthenticatedUser;
@@ -39,10 +37,9 @@ export const AuthProvider: React.FC<{}> = ({ children }) => {
             getAuth(),
             (fbUser) => { // onSuccess
                 setLoading(false);
-                if (!fbUser) return;
-                setUser({
+                setUser(fbUser ? {
                     uid: fbUser.uid,
-                });
+                } : undefined);
             },
         );
     }, []);

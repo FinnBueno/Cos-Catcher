@@ -70,13 +70,7 @@
         "react-hooks/rules-of-hooks": "error",
         "react-hooks/exhaustive-deps": "warn",
         "jsx-quotes": ["error", "prefer-single"],
-        "react/require-default-props": [
-            1,
-            {
-                "forbidDefaultForRequired": true,
-                "functions": "defaultArguments"
-            }
-        ]
+        "react/require-default-props": "off"
     },
     "settings": {
         "import/resolver": {

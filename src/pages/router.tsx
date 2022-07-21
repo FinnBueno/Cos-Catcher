@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import { Flex } from 'reflexbox';
 import { useAuth } from 'services/auth';
 import { SignInPage } from './auth';
+import { SignUpPage } from './auth/sign-up';
 import { MainPage } from './main';
 
 export const AppRouter: React.FC<{}> = () => {
@@ -13,6 +14,10 @@ export const AppRouter: React.FC<{}> = () => {
                 <Route
                     path='/sign-in'
                     element={unauthenticatedWrap(SignInPage)}
+                />
+                <Route
+                    path='/sign-up'
+                    element={unauthenticatedWrap(SignUpPage)}
                 />
                 <Route
                     path='/'
