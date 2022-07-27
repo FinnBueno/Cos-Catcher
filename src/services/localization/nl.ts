@@ -16,5 +16,6 @@ export const nl: Localization = {
         createAccountInstead: 'Nog geen account?',
         signInInstead: 'Heb je al een account?',
         password: 'Wachtwoord'
-    }
+    },
+    title: 'CosCatcher',
 };

@@ -22,7 +22,7 @@ export const App: React.FC<{}> = () => (
     <HelmetProvider>
         <Helmet>
             <meta charSet='utf-8' />
-            <title>Ingredient Pouch</title>
+            <title>CosCatcher</title>
             <link rel='preconnect' href='https://fonts.gstatic.com' />
             <link rel='preconnect' href='https://fonts.googleapis.com' />
             <link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin='' />

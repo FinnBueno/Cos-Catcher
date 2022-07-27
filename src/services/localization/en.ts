@@ -16,5 +16,6 @@ export const en: Localization = {
         createAccountInstead: 'Create account instead',
         signInInstead: 'Sign in instead',
         password: 'Password'
-    }
+    },
+    title: 'CosCatcher',
 };
