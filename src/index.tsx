@@ -1,9 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { initializeApp } from 'firebase/app';
-import { App } from './App';
-// import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import './index.css';
+import { connectAuthEmulator, getAuth } from 'firebase/auth';
+import { connectDatabaseEmulator, getDatabase } from 'firebase/database';
+import { connectStorageEmulator, getStorage } from 'firebase/storage';
+// import * as serviceWorkerRegistration from './serviceWorkerRegistration';
+import { App } from './App';
 
 initializeApp({
     apiKey: 'AIzaSyBGYuiulskFhwZFbnQLRtG3PqCz8h8xtms',
@@ -15,6 +18,15 @@ initializeApp({
     appId: '1:655740181816:web:9cb4bdd6404002a228f5cd',
     measurementId: 'G-VHE7116XMJ'
 });
+
+if (window.location.hostname === 'localhost') {
+    // auth emulator
+    connectAuthEmulator(getAuth(), 'http://localhost:9099');
+    // db emulator
+    connectDatabaseEmulator(getDatabase(), 'localhost', 9000);
+    // storage emulator
+    connectStorageEmulator(getStorage(), 'localhost', 9199);
+}
 
 ReactDOM.render(
     <React.StrictMode>
