@@ -6,6 +6,7 @@
     "start": "react-scripts start",
     "build": "npx eslint \"src/**\" --fix && react-scripts build",
     "test": "react-scripts test",
+    "emulators": "firebase emulators:start --import emulators --export-on-exit",
     "eject": "react-scripts eject"
   },
   "browserslist": {
